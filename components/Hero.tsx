@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { div } from "framer-motion/client";
 
 export default function SuperNovaLogo() {
     // const logoRef = useRef<SVGSVGElement>(null);
