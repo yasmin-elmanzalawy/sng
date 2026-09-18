@@ -75,8 +75,7 @@ export default function ClientsSection() {
     return () => clearInterval(timer);
   }, []);
 
-  const activeDotIndex = currentIndex % CLIENTS.length;
-  const slidePercentage = isMobile ? 33.333333 : 20;
+  const slidePercentage = isMobile ? 50 : 20;
 
   return (
     <section className="relative w-full overflow-hidden px-0 py-12 sm:py-16">
@@ -134,7 +133,7 @@ export default function ClientsSection() {
           </div>
 
           {/* Full-Width Carousel Bar */}
-          <div className="relative z-10 flex min-h-[180px] w-full items-center justify-between border-y border-purple-500/30 bg-[#0d071d]/90 px-2 py-6 backdrop-blur-2xl shadow-[0_0_50px_rgba(168,85,247,0.25)] sm:px-6">
+          <div className="relative z-10 flex min-h-[220px] w-full items-center justify-between border-y border-purple-500/30 bg-[#0d071d]/90 px-1 py-8 backdrop-blur-2xl shadow-[0_0_50px_rgba(168,85,247,0.25)] sm:px-4">
             {/* Left Button */}
             <button
               onClick={handlePrev}
@@ -144,8 +143,8 @@ export default function ClientsSection() {
               <Image src="/clients/leftArrow.webp" alt="Previous" fill className="object-contain" />
             </button>
 
-            {/* Hardware-Accelerated Sliding Track (3 Columns on Mobile, 5 on Desktop) */}
-            <div className="w-full overflow-hidden px-1 sm:px-4">
+            {/* Hardware-Accelerated Sliding Track (2 Columns on Mobile, 5 on Desktop) */}
+            <div className="w-full overflow-hidden px-1 sm:px-2">
               <div
                 className={`flex ${
                   isTransitioning
@@ -160,9 +159,9 @@ export default function ClientsSection() {
                 {EXTENDED_CLIENTS.map((client, idx) => (
                   <div
                     key={`${client.name}-${idx}`}
-                    className="flex h-28 w-[33.333333%] shrink-0 sm:w-[20%] sm:h-36 items-center justify-center px-1 sm:px-2"
+                    className="flex h-36 w-[50%] shrink-0 items-center justify-center px-2 sm:h-48 sm:w-[20%] sm:px-2"
                   >
-                    <div className="relative h-full w-full max-w-[320px] opacity-90 transition-all duration-300 hover:opacity-100 hover:scale-110">
+                    <div className="relative h-full w-full opacity-95 transition-all duration-300 hover:scale-110 hover:opacity-100">
                       <Image
                         src={client.src}
                         alt={client.name}
@@ -183,25 +182,6 @@ export default function ClientsSection() {
             >
               <Image src="/clients/rightArrow.webp" alt="Next" fill className="object-contain" />
             </button>
-          </div>
-
-          {/* Indicator Dots */}
-          <div className="mt-6 flex items-center justify-center gap-2">
-            {CLIENTS.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  setIsTransitioning(true);
-                  setCurrentIndex(CLIENTS.length + i);
-                }}
-                aria-label={`Go to slide ${i + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === activeDotIndex
-                    ? "w-8 bg-gradient-to-r from-purple-400 to-indigo-400 shadow-[0_0_12px_rgba(192,132,252,0.9)]"
-                    : "w-2.5 bg-white/20 hover:bg-white/40"
-                }`}
-              />
-            ))}
           </div>
         </div>
       </div>

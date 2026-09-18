@@ -87,7 +87,7 @@ export default function Navbar() {
           {/* LEFT LINKS */}
           <ul
             className={`hidden items-center md:flex font-extrabold uppercase tracking-wide text-white transition-all duration-500 ${
-              scrolled ? "gap-8 text-sm" : "gap-10 text-base"
+              scrolled ? "gap-24 text-sm" : "gap-20 text-base"
             }`}
           >
             {leftLinks.map((link) => (
@@ -126,7 +126,7 @@ export default function Navbar() {
           {/* RIGHT LINKS */}
           <ul
             className={`hidden items-center md:flex font-extrabold uppercase tracking-wide text-white transition-all duration-500 ${
-              scrolled ? "gap-8 text-sm" : "gap-10 text-base"
+              scrolled ? "gap-24 text-sm" : "gap-20 text-base"
             }`}
           >
             {rightLinks.map((link) => (
