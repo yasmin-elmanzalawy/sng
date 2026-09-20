@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cairo, Poppins } from "next/font/google";
 import "./globals.css";
 import StarCursor from "@/components/StarCursor";
+import Starfield from "@/components/Starfield";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,9 +38,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="relative min-h-full flex flex-col bg-[#070312] text-white">
+        {/* GLOBAL BACKGROUND CANVAS */}
+        <Starfield />
+
+        {/* CUSTOM CURSOR */}
         <StarCursor />
-        {children}
+
+        {/* PAGE CONTENT */}
+        <div className="relative z-10 flex flex-col flex-1">{children}</div>
       </body>
     </html>
   );
