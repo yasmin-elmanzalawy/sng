@@ -173,7 +173,7 @@ export default function AboutPlanet() {
       {/* =========================================================
           1. MAIN ABOUT SECTION
       ========================================================= */}
-      <section ref={sectionRef} className="relative w-full overflow-hidden px-6 py-16 sm:py-24">
+      <section ref={sectionRef} className="relative w-full overflow-hidden px-6 py-8 sm:pb-8">
         {/* Ambient Particles */}
         <div className="pointer-events-none absolute inset-0 z-0 opacity-60">
           <span className="particle particle-1" />

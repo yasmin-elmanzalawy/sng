@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Starfield from "./Starfield";
 
+
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
@@ -325,6 +326,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        
 
         <style jsx>{`
           /* =========================================

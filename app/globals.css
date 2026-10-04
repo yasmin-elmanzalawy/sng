@@ -64,7 +64,10 @@
   font-display: swap;
 }
 
-
+/* Hide global footer while loading screen is active */
+body.is-loading footer {
+  display: none !important;
+}
 .title-font {
   font-family: "Square Pixel", sans-serif;
   font-size: clamp(1.5rem, 5vw, 2.5rem);

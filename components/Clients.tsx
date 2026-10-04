@@ -78,7 +78,7 @@ export default function ClientsSection() {
   const slidePercentage = isMobile ? 50 : 20;
 
   return (
-    <section className="relative w-full overflow-hidden px-0 py-12 sm:py-16">
+    <section className="relative w-full overflow-hidden px-0 py-12 sm:py-22">
       {/* Ambient drifting particles */}
       <div className="pointer-events-none absolute inset-0 z-0 opacity-60">
         <span className="particle particle-1" />
