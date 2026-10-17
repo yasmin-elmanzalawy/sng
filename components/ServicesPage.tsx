@@ -120,7 +120,7 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full bg-[#070312] text-white py-8 sm:pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative min-h-screen w-full text-white py-8 sm:pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Ambient background glows */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#6d28d9]/15 blur-[160px] rounded-full" />

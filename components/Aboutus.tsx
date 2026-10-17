@@ -241,7 +241,7 @@ export default function AboutPlanet() {
                 }`}
                 style={{ transitionDelay: isVisible ? "400ms" : "0ms" }}
               >
-                SuperNova Gaming (SNG) is a fully remote gaming organization—not just an Esports organization, but a vibrant gaming community fueled by passion and dedication. Established in 2019, we have been on a mission to elevate the gaming experience, empower Esports talents, and foster a sense of togetherness among gaming enthusiasts.
+                SuperNova Gaming (SNG) is a fully remote gaming organization not just an Esports organization, but a vibrant gaming community fueled by passion and dedication. Established in 2019, we have been on a mission to elevate the gaming experience, empower Esports talents, and foster a sense of togetherness among gaming enthusiasts.
               </p>
             </div>
 
