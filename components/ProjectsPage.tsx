@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 // Floating Rocks for Projects Page
 const FLOATING_ROCKS_PROJECTS = [
@@ -20,7 +21,7 @@ const PROJECTS_DATA = [
     title: "356GAMES.NET",
     subtitle: "356GAMES – BRINGING GAMING TO LIFE THROUGH ENGAGING CONTENT",
     logo: "/clients/games.webp",
-    link: "#",
+    link: "/projects/365games", // <-- Updated link to point to your new page
     imgClass: "scale-125 sm:scale-150",
   },
   {
@@ -111,7 +112,7 @@ export default function ProjectsPage() {
         {/* Header */}
         <div ref={headerRef} className="flex flex-col items-center justify-center text-center mb-16">
           <h2
-            className={`transition-all title-font  duration-700 ease-out ${
+            className={`transition-all title-font duration-700 ease-out ${
               isHeaderVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
           >
@@ -158,16 +159,16 @@ export default function ProjectsPage() {
               <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-b from-[#a855f7]/25 via-transparent to-[#100727] opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* TOP: Big Project Logo */}
-              <div className="relative  z-10 flex items-center justify-center h-48 sm:h-56 w-full mb-6">
+              <div className="relative z-10 flex items-center justify-center h-48 sm:h-56 w-full mb-6">
                 <img
                   src={project.logo}
                   alt={project.title}
-                  className={`max-w-[85%]  max-h-full object-contain filter brightness-110 contrast-105 drop-shadow-[0_0_15px_rgba(255,255,255,0.25)] group-hover:scale-105 transition-transform duration-500 ease-out ${project.imgClass}`}
+                  className={`max-w-[85%] max-h-full object-contain filter brightness-110 contrast-105 drop-shadow-[0_0_15px_rgba(255,255,255,0.25)] group-hover:scale-105 transition-transform duration-500 ease-out ${project.imgClass}`}
                 />
               </div>
 
               {/* MIDDLE: Text Info */}
-              <div className=" relative z-10 flex flex-col items-center text-center flex-1 justify-between">
+              <div className="relative z-10 flex flex-col items-center text-center flex-1 justify-between">
                 <div>
                   <h3 className="mb-3 title-font">
                     {project.title}
@@ -177,8 +178,8 @@ export default function ProjectsPage() {
                   </p>
                 </div>
 
-                {/* BOTTOM: Read More Button Pill */}
-                <a
+                {/* BOTTOM: Read More Button Pill (Using Next.js Link) */}
+                <Link
                   href={project.link}
                   className="square-px inline-flex items-center justify-between gap-4 rounded-full bg-[#1b0d3d]/90 border border-[#a855f7]/50 px-6 py-2.5 group-hover:border-[#a855f7] group-hover:bg-[#a855f7]/20 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300"
                 >
@@ -186,7 +187,7 @@ export default function ProjectsPage() {
                   <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#a855f7]/30 text-white text-xs group-hover:bg-[#a855f7] transition-all duration-300">
                     →
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
