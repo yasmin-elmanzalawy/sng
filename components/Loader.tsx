@@ -409,7 +409,7 @@ export default function SupernovaLoader({ onComplete }: SupernovaLoaderProps) {
           >
             <span style={{
               display: "block",
-              fontFamily: "'Arial Black', Arial, sans-serif",
+              fontFamily: "'Square Pixel', sans-serif",
               fontWeight: 900, fontSize: 24,
               letterSpacing: 6, color: "#ffffff",
               textTransform: "uppercase", lineHeight: 1,

@@ -307,7 +307,7 @@ export default function Hero() {
             SUPERNOVA GAMING
           </h1>
 
-          <p className="p-font mt-3 max-w-xl text-[clamp(0.9rem,3vw,1.125rem)] text-gray-300 sm:mt-4">
+          <p className="p-font !text-center mt-3 max-w-xl text-[clamp(0.9rem,3vw,1.125rem)] text-gray-300 sm:mt-4">
             Powered by Events, Esports, and Immersive Experiences
           </p>
 

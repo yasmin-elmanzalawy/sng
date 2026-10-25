@@ -92,15 +92,27 @@ export default function AboutPlanet() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
-          <h2 className="title-font text-white">
+          {/* <h2 className="title-font text-white">
             About Us
-          </h2>
+          </h2> */}
           {/* Decorative line with center star */}
+          {/* <div className="mt-3 flex items-center justify-center gap-3">
+            <span className="h-[1px] w-12 bg-gradient-to-r from-transparent via-[#a855f7]/60 to-[#F9C275]" />
+            <span className="text-xs text-[#F9C275]">✦</span>
+            <span className="h-[1px] w-12 bg-gradient-to-l from-transparent via-[#a855f7]/60 to-[#F9C275]" />
+          </div> */}
+        </div>
+                {/* Header Section */}
+        <div className="mb-8 flex flex-col items-center justify-center text-center">
+          <h2 className="title-font text-white">About Us</h2>
           <div className="mt-3 flex items-center justify-center gap-3">
             <span className="h-[1px] w-12 bg-gradient-to-r from-transparent via-[#a855f7]/60 to-[#F9C275]" />
             <span className="text-xs text-[#F9C275]">✦</span>
             <span className="h-[1px] w-12 bg-gradient-to-l from-transparent via-[#a855f7]/60 to-[#F9C275]" />
           </div>
+          <p className="p-font mt-4 text-sm font-light text-gray-300/90 sm:text-base" style={{ textAlign: "center" }}>
+              Driven by Discipline. Powered by Innovation. Guided by Purpose.
+          </p>
         </div>
 
         {/* =========================================================
@@ -109,7 +121,7 @@ export default function AboutPlanet() {
         <div className="flex flex-col-reverse items-center justify-between gap-12 lg:flex-row lg:gap-16">
           {/* TEXT BLOCK */}
           <div className="max-w-2xl text-left">
-            <p
+            {/* <p
               className={`tagline-font bg-gradient-to-r from-[#c084fc] to-[#e9d5ff] bg-clip-text text-transparent transition-all duration-700 ease-out ${
                 isVisible
                   ? "translate-y-0 opacity-100"
@@ -118,7 +130,7 @@ export default function AboutPlanet() {
               style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
             >
               Driven by Discipline. Powered by Innovation. Guided by Purpose.
-            </p>
+            </p> */}
 
             <p
               className={`p-font mt-4 text-gray-300 transition-all duration-700 ease-out ${

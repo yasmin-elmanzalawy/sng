@@ -29,7 +29,7 @@ const PROJECTS_DATA = [
     title: "ARENA PUBG CUP",
     subtitle: "BRINGING THE COMMUNITY TOGETHER",
     logo: "/clients/arena.webp",
-    link: "#",
+    link: "/projects/arena",
     imgClass: "scale-110 sm:scale-135",
   },
 ];
